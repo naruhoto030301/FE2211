@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="item item1" id="content" title="hello cac ban" style="background-color: blue; color: red;"></div>
+    <input type="text" name="" id="so">
+    <button id="submit" onclick="getValue()">Submit</button>
+    <h1 id="ketqua">Ket qua se hien thi o day</h1>
+    <script>
+    console.log(document.getElementById('content').innerHTML);
+        function getValue(){
+            let a = document.getElementById('so').value;
+            document.getElementById('ketqua').innerHTML = "co so 2 cua" + a + " la: " + chuyennp(a)+"";
+            console.log();
+        }
+    function chuyennp(a){
+        let str ='';
+        do{
+            r = a % 2;
+            a = Math.floor(a/2);
+            str = r + str;
+        }while(a !=0)
+        return str;
+    }
+    
+   </script>
+</body>
+</html>
